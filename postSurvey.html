@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<title>Welcome to the Online Calendar</title>
+		<style>
+			div.underline { padding-bottom: 5 px; margin-bottom: 5 px; border-bottom: 1px solid gray; }
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+
+
+				<div id="first">
+
+<legend> Welcome to the Online Calendar </legend>
+
+						<div class="col-sm-offset-2 col-sm-10"><button id="creates" class="btn btn-primary">Create Account</button></div>
+						<div class="col-sm-offset-2 col-sm-10"><button id="logins" class="btn btn-primary">Log In</button></div>
+
+
+					</div>
+
+
+				<div id="create">
+					<h3 class="text-warning">Create An Account</h3>
+					<label for="user" class="control-label col-sm-2">Username:</label>
+					<div class="col-sm-10"><input type="text" class="form-control" id="user" /></div>
+					<label for="password" class="control-label col-sm-2">Password:</label>
+					<div class="col-sm-10"><input type="password" class="form-control" id="password" /></div>
+					<label for="title" class="control-label col-sm-2">Title:</label>
+					<div class="col-sm-10"><input type="text" class="form-control" id="title" /></div>
+					<label for="Description" class="control-label col-sm-2">Description:</label>
+					<div class="col-sm-10"><input type="text" class="form-control" id="description" /></div>
+					<div class="col-sm-offset-2 col-sm-10"><button id="docreate" class="btn btn-primary">Create Account</button></div>
+					<p>Fill in the form below with the details of your Account and click create.</p>
+
+
+				</div>
+				<div id="event">
+					<h3 class="text-warning">Create An Event</h3>
+				  <!-- You already have elements in the division above this one with ids of
+					title and Description.
+					<label for="title" class="control-label col-sm-2">Title:</label>
+					<div class="col-sm-10"><input type="text" class="form-control" id="Title" /></div>
+					<label for="description" class="control-label col-sm-2">Description</label>
+					<div class="col-sm-10"><input type="password" class="form-control" id="Description" /></div>
+					I fixed this. -->
+					<label for="eventTitle" class="control-label col-sm-2">Title:</label>
+					<div class="col-sm-10"><input type="text" class="form-control" id="eventTitle" /></div>
+					<label for="eventDescription" class="control-label col-sm-2">Description</label>
+					<div class="col-sm-10"><input type="password" class="form-control" id="eventDescription" /></div>
+
+					<label for="Start" class="control-label col-sm-2">Start:</label>
+					<div class="col-sm-10"><input type="text" class="form-control" id="Start" /></div>
+					<label for="Description" class="control-label col-sm-2">End:</label>
+					<div class="col-sm-10"><input type="text" class="form-control" id="End" /></div>
+					<label for="Access" class="col-form-label col-md-1">Access:</label>
+						<div class="col-md-2">
+					<select class="form-control" id="Access">
+								<option value="public">Public</option>
+								<option value="private">Private</option>
+
+							</select>
+					<div class="col-sm-offset-2 col-sm-10"><button id="eventcreate" class="btn btn-primary">Post an Event</button></div>
+					<div class="col-sm-offset-2 col-sm-10"><button id="back" class="btn btn-primary">Back</button></div>
+					<p>Fill in the form below with the details of your event and click create.</p>
+
+						<h3 class="text-warning">Delete An Event</h3>
+						<div class="col-md-2">
+					<select class="form-control" id="manageevents">
+						</select>
+						<div class="col-sm-offset-2 col-sm-10"><button id="delete" class="btn btn-primary">Delete</button></div>
+						<div class="col-sm-offset-2 col-sm-10"><button id="back2" class="btn btn-primary">Back</button></div>
+
+
+</div>
+</div></div>
+
+				<div id="loginuser">
+					<h3 class="text-warning">Log In</h3>
+					<label for="user" class="control-label col-sm-2">Username:</label>
+					<div class="col-sm-10"><input type="text" class="form-control" id="user2" /></div>
+					<label for="password" class="control-label col-sm-2">Password:</label>
+					<div class="col-sm-10"><input type="password" class="form-control" id="password2" /></div>
+					<div class="col-sm-offset-2 col-sm-10"><button id="login" class="btn btn-primary">Log In</button></div>
+					</div>
+
+				<div id="three">
+					<!--- This code
+					<h3 class="text-warning">Step Three</h3>
+					<p>Your survey has been uploaded.</p>
+					<p>The URL that users will use to access your survey is <span id="survey_url"></span>.</p>
+					<p>You will be able to view survey results at the URL <span id="results_url"></span>.</p>
+					is left over from the survey example, and is not relevant here. What you need
+					instead here is code to display the day's events. I added that code for you. -->
+					<div class="col-md-2">
+						<!-- You had these elements here.
+				<select class="form-control" id="manageaccounts">
+
+
+						</select>
+						<div class="col-sm-offset-2 col-sm-10"><button id="View" class="btn btn-primary">View</button></div>
+						They don't belong in this section. -->
+					</div>
+					<h3 class="text-warning">Today's Events</h3>
+					<ul id="events"></ul>
+					<div class="col-sm-offset-2 col-sm-10"><button id="Manage" class="btn btn-primary">Manage Follows</button></div>
+					<div class="col-sm-offset-2 col-sm-10"><button id="Post" class="btn btn-primary">Post an Event</button></div>
+				</div>
+
+				<div id="manage">
+
+					<div class="col-md-2">
+				<select class="form-control" id="manageaccounts">
+
+
+						</select>
+						<div class="col-sm-offset-2 col-sm-10"><button id="View" class="btn btn-primary">View</button></div>
+					</div>
+
+					<ul id="events"></ul>
+					<div class="col-sm-offset-2 col-sm-10"><button id="follow" class="btn btn-primary">Follow</button></div>
+					<div class="col-sm-offset-2 col-sm-10"><button id="back" class="btn btn-primary">Back</button></div>
+				</div>
+
+
+        <script src="postSurvey.js"></script>
+
+	</body>
+</html>
